@@ -1,0 +1,16 @@
+把yolov3.weights转为预训练模型：
+15 may be not right
+./darknet partial ./cfg/yolov3.cfg ./yolov3.weights ./yolov3.conv.15 15
+sudo ./darknet detector train cfg/voc.data cfg/yolov3.cfg yolov3.conv.15
+
+this is ori
+sudo ./darknet detector train cfg/voc.data cfg/yolov3.cfg darknet53.conv.74
+
+测试：
+./darknet detector test cfg/voc.data cfg/yolov3.cfg backup/yolov3_300.weights   /home/mm/darknet/data/VOCdevkit2007/VOC2007/JPEGImages/41.jpg
+
+./darknet detector test cfg/voc.data cfg/yolov3.cfg backup/yolov3_300.weights /home/mm/darknet/data/VOCdevkit2007/VOC2007/JPEGImages/41.jpg -thresh 0.05
+
+./darknet detector test cfg/voc.data cfg/yolov3.cfg backup/yolov3_final.weights /home/dd/openvino_models/droneCOM/darknet/data/VOCdevkit2007/VOC2007/JPEGImages/385.jpg
+
+
