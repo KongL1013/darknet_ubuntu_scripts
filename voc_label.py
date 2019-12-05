@@ -6,7 +6,7 @@ from os.path import join
 
 sets=[('2007', 'train'), ('2007', 'val'), ('2007', 'test')]
 
-classes = ["1","2","3","j","k"]
+classes = ["door","table","doc","pipe"]
 
 
 def convert(size, box):
